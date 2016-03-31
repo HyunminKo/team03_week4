@@ -12,6 +12,16 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    
+    
+    <!-- Jacoco and Sonar config properties -->
+    <sonar.java.coveragePlugin>jacoco</sonar.java.coveragePlugin>
+    <sonar.dynamicAnalysis>reuseReports</sonar.dynamicAnalysis>
+    <jacoco.version>0.7.6.201602180812</jacoco.version>
+    <sonar-jacoco-listeners.version>1.7</sonar-jacoco-listeners.version>
+    <sonar.sourceEncoding>UTF-8</sonar.sourceEncoding>
+	<sonar.java.source>1.7</sonar.java.source>
+	<sonar.jacoco.reportPath>${project.build.directory}/coverage-reports/jacoco-ut.exec</sonar.jacoco.reportPath>
   </properties>
 
   <dependencies>
