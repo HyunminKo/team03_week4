@@ -12,11 +12,13 @@ public class TotalRate {
 		lineCost = planType.getBasicMonthlyRate();
 		if (numberOfLines > 1 && numberOfLines <= 3) {
 			lineCost += ((numberOfLines - 1) * planType.getAdditionalLineRate());
-			System.out.print(planType.getBasicMonthlyRate()+" + ( "+numberOfLines+" * "+planType.getAdditionalLineRate()+" )");
+			System.out.print(planType.getBasicMonthlyRate()+" + ( "+(numberOfLines-1)+" * "+planType.getAdditionalLineRate()+" )");
 		} else if (numberOfLines >= 4) {
 			lineCost += (((numberOfLines - 3) * planType.getFamilyDistcount())+planType.getAdditionalLineRate()*2);
 			System.out.print(planType.getBasicMonthlyRate()+" + ( "+2+" * "+planType.getAdditionalLineRate()+" ) + "+
-			" ( "+(numberOfLines-2)+" * "+planType.getFamilyDistcount()+" )");
+			" ( "+(numberOfLines-3)+" * "+planType.getFamilyDistcount()+" )");
+		} else if(numberOfLines == 1) {
+			System.out.print(planType.getBasicMonthlyRate());
 		}
 		
 		return lineCost;
