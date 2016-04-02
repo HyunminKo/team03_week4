@@ -12,9 +12,13 @@ public class TotalRate {
 		lineCost = planType.getBasicMonthlyRate();
 		if (numberOfLines > 1 && numberOfLines <= 3) {
 			lineCost += ((numberOfLines - 1) * planType.getAdditionalLineRate());
+			System.out.print(planType.getBasicMonthlyRate()+" + ( "+numberOfLines+" * "+planType.getAdditionalLineRate()+" )");
 		} else if (numberOfLines >= 4) {
 			lineCost += (((numberOfLines - 3) * planType.getFamilyDistcount())+planType.getAdditionalLineRate()*2);
+			System.out.print(planType.getBasicMonthlyRate()+" + ( "+2+" * "+planType.getAdditionalLineRate()+" ) + "+
+			" ( "+(numberOfLines-2)+" * "+planType.getFamilyDistcount()+" )");
 		}
+		
 		return lineCost;
 	}
 
@@ -27,6 +31,7 @@ public class TotalRate {
 		
 		if (minutesUsed > includedMinutes) {
 			usedCost = (minutesUsed - includedMinutes) * ratePerExcessMinute;
+			System.out.print(" + ( "+(minutesUsed - includedMinutes)+" * "+ratePerExcessMinute+" ) ");
 		} else {
 			usedCost = 0;
 		}
@@ -35,7 +40,8 @@ public class TotalRate {
 	}
 
 	public double calTotalRate(User user, PlanType planType) {
-		totalRate = calMinuteUsed(user, planType) + calNumberOfLine(user, planType);
+		totalRate = calNumberOfLine(user, planType) + calMinuteUsed(user, planType);
+		System.out.printf(" = %.2f",totalRate);
 		return totalRate;
 	}
 
