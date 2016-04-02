@@ -6,7 +6,7 @@ public class TotalRate {
 	private double usedCost = 0;
 	
 	public int calNumberOfLine(User user, PlanType planType) {
-		// 
+		//
 		return 0;
 	}
 	
