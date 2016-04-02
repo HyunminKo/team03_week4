@@ -13,13 +13,13 @@ public class App {
     	boolean go = true;
     	
     	while(go) {
-    		System.out.println("User의 요금제를 입력하세요. ");
+    		System.out.println("User의 요금제(Gold 또는 Silver)를 입력하세요.");
     		user.setPlanTypeName(scan.next());
 
-    		if(user.getPlanTypeName().equals("Gold")) {
+    		if(user.getPlanTypeName().equals("Gold") || user.getPlanTypeName().equals("gold")) {
     			planType = new Gold();
     			go = false;
-    		} else if(user.getPlanTypeName().equals("Silver")){
+    		} else if(user.getPlanTypeName().equals("Silver") || user.getPlanTypeName().equals("silver")){
     			planType = new Silver();
     			go = false;
     		}else{
@@ -30,22 +30,22 @@ public class App {
     	
     	go = true;
     	while(go){
-    	System.out.println("User의 회선 수를 입력하세요. ");
-    	user.setNumberOfLines(scan.nextInt());
-    	if(user.getNumberOfLines()<=0)
-    		System.out.println("잘못된 입력값입니다.");
-    	else
-    		go = false;
+	    	System.out.println("User의 회선 수를 입력하세요. ");
+	    	user.setNumberOfLines(scan.nextInt());
+	    	if(user.getNumberOfLines()<=0)
+	    		System.out.println("잘못된 입력값입니다.");
+	    	else
+	    		go = false;
     	}
     	
     	go = true;
     	while(go){
-    	System.out.println("User의 사용시간을 입력하세요. ");
-    	user.setMinutesUsed(scan.nextInt());
-    	if(user.getMinutesUsed()<=0)
-    		System.out.println("잘못된 입력값입니다.");
-    	else
-    		go = false;
+	    	System.out.println("User의 사용시간을 입력하세요. ");
+	    	user.setMinutesUsed(scan.nextInt());
+	    	if(user.getMinutesUsed()<=0)
+	    		System.out.println("잘못된 입력값입니다.");
+	    	else
+	    		go = false;
     	}
     	
 
