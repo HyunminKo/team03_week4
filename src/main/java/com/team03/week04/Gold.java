@@ -1,7 +1,7 @@
 package com.team03.week04;
 
 public class Gold extends PlanType{
-	Gold(){
+	public Gold(){
 		this.setBasicMonthlyRate(49.95);
 		this.setAdditionalLineRate(14.50);
 		this.setFamilyDistcount(5.0);

@@ -12,10 +12,9 @@ public class TotalRate {
 		lineCost = planType.getBasicMonthlyRate();
 		if (numberOfLines > 1 && numberOfLines <= 3) {
 			lineCost += ((numberOfLines - 1) * planType.getAdditionalLineRate());
-		} else if (numberOfLines > 4) {
-			lineCost += ((numberOfLines - 3) * planType.getFamilyDistcount());
+		} else if (numberOfLines >= 4) {
+			lineCost += (((numberOfLines - 3) * planType.getFamilyDistcount())+planType.getAdditionalLineRate()*2);
 		}
-
 		return lineCost;
 	}
 
@@ -35,8 +34,8 @@ public class TotalRate {
 		return usedCost;
 	}
 
-	public double calTotalRate() {
-		totalRate = lineCost + usedCost;
+	public double calTotalRate(User user, PlanType planType) {
+		totalRate = calMinuteUsed(user, planType) + calNumberOfLine(user, planType);
 		return totalRate;
 	}
 

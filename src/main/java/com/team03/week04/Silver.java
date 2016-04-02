@@ -1,7 +1,7 @@
 package com.team03.week04;
 
 public class Silver extends PlanType{
-	Silver(){
+	public Silver(){
 		this.setBasicMonthlyRate(29.95);
 		this.setAdditionalLineRate(21.50);
 		this.setFamilyDistcount(5.0);
