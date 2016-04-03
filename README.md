@@ -17,12 +17,12 @@
 		JVM Options : -Xmx500m -XX:MaxPermSize=100m
 
 #구성
-App.java : main 함수를 포함한 클래스로 사용자 인터페이스는 console 화면으로 실행된다.
-User.java : 사용자 정보를 담고 있는 클래스로 App.java에 입력받아 user객체로 저장한다.
-PlanType.java : 요금제의 상위 클래스로 상속받아 실제 요금제의 정보를 입력할 수 있다.
-Gold.java : Gold 요금제에 대한 정보를 담고 있는 클래스로 PanType 클래스를 상속받는다.
-Silver.java : Silver 요금제에 대한 정보를 담고 있는 클래스로 PanType 클래스를 상속받는다.
-TotalRate.java : 사용자 객체와 요금제 객체를 이용해 실제 청구될 금액을 계산해 준다.
+	App.java : main 함수를 포함한 클래스로 사용자 인터페이스는 console 화면으로 실행된다.
+	User.java : 사용자 정보를 담고 있는 클래스로 App.java에 입력받아 user객체로 저장한다.
+	PlanType.java : 요금제의 상위 클래스로 상속받아 실제 요금제의 정보를 입력할 수 있다.
+	Gold.java : Gold 요금제에 대한 정보를 담고 있는 클래스로 PanType 클래스를 상속받는다.
+	Silver.java : Silver 요금제에 대한 정보를 담고 있는 클래스로 PanType 클래스를 상속받는다.
+	TotalRate.java : 사용자 객체와 요금제 객체를 이용해 실제 청구될 금액을 계산해 준다.
 
 
 #실행 방법
