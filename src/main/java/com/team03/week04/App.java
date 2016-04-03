@@ -38,8 +38,9 @@ public class App {
 	    	if(user.getNumberOfLines()<=0){
 	    		System.out.println(PRINTERRORMESSAGE);
 	    	}
-	    	else
+	    	else{
 	    		go = false;
+	    	}
     	}
     	
     	go = true;
@@ -49,8 +50,9 @@ public class App {
 	    	if(user.getMinutesUsed()<=0){
 	    		System.out.println(PRINTERRORMESSAGE);
 	    	}
-	    	else
+	    	else{
 	    		go = false;
+	    	}
     	}
     	
 
