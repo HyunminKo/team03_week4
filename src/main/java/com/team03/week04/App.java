@@ -4,7 +4,7 @@ import java.util.Scanner;
 import java.util.logging.Logger;
 
 public class App {
-    private static final Logger LOG_APP = Logger.getLogger("InfoLogging");
+    private static final Logger LOGGER = Logger.getLogger("InfoLogging");
 	private static final String PRINTERRORMESSAGE = "잘못된 입력값입니다.";
 	private App(){
 	}
@@ -18,7 +18,7 @@ public class App {
     	
     	
     	while(go) {
-    		LOG_APP.info("User의 요금제를 입력하세요.");
+    		LOGGER.info("User의 요금제를 입력하세요.");
     		user.setPlanTypeName(scan.next());
 
     		if("Gold".equals(user.getPlanTypeName()) || "gold".equals(user.getPlanTypeName())) {
@@ -28,17 +28,17 @@ public class App {
     			planType = new Silver();
     			go = false;
     		}else{
-    			LOG_APP.info(PRINTERRORMESSAGE);
+    			LOGGER.info(PRINTERRORMESSAGE);
     		}
     		
     	}
     	
     	go = true;
     	while(go){
-    		LOG_APP.info("User의 회선 수를 입력하세요.");
+    		LOGGER.info("User의 회선 수를 입력하세요.");
 	    	user.setNumberOfLines(scan.nextInt());
 	    	if(user.getNumberOfLines()<=0){
-	    		LOG_APP.info(PRINTERRORMESSAGE);
+	    		LOGGER.info(PRINTERRORMESSAGE);
 	    	}else{
 	    		go = false;
 	    	}
@@ -46,21 +46,21 @@ public class App {
     	
     	go = true;
     	while(go){
-    		LOG_APP.info("User의 사용시간을 입력하세요.");
+    		LOGGER.info("User의 사용시간을 입력하세요.");
 	    	user.setMinutesUsed(scan.nextInt());
 	    	if(user.getMinutesUsed()<=0){
-	    		LOG_APP.info(PRINTERRORMESSAGE);
+	    		LOGGER.info(PRINTERRORMESSAGE);
 	    	}else{
 	    		go = false; 
 	    	}
     	}
     	
 
-    	LOG_APP.info("User의 요금제 : " + user.getPlanTypeName());
+    	LOGGER.info("User의 요금제 : " + user.getPlanTypeName());
 
-    	LOG_APP.info("User의 회선 수 : " + user.getNumberOfLines());
+    	LOGGER.info("User의 회선 수 : " + user.getNumberOfLines());
 
-    	LOG_APP.info("User의 사용시간 : "+ user.getMinutesUsed());
+    	LOGGER.info("User의 사용시간 : "+ user.getMinutesUsed());
     	
     	totalRate.calTotalRate(user, planType);    	
     }
