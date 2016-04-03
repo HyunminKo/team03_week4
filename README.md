@@ -18,16 +18,16 @@ TotalRate.java : 사용자 객체와 요금제 객체를 이용해 실제 청구
 ##2. Import Eclipse project
 
 ##3. Build
-	###3-1. Build maven project
+###3-1. Build maven project
 
 ##4. Excute
 	go to project directory
 	command : java -jar week4-0.0.1-SNAPSHOT.jar
 
 ##5. run
-	###5-1. insert your plan type.
+###5-1. insert your plan type.
 		(ex. Gold, gold, Silver, silver)
-	###5-2. insert your number of lines.
+###5-2. insert your number of lines.
 		
-	###5-3. insert the used minutes
+###5-3. insert the used minutes
 		
