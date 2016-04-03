@@ -1,6 +1,8 @@
 package com.team03.week04;
 
 public class TotalRate {
+	private static final String PREROUNDBRACKET = " + ( ";
+	private static final String POSTROUNDBRACKET = " )";
 	private double totalCost = 0;
 	private double lineCost = 0;
 	private double usedCost = 0;
@@ -12,11 +14,11 @@ public class TotalRate {
 		lineCost = planType.getBasicMonthlyRate();
 		if (numberOfLines > 1 && numberOfLines <= 3) {
 			lineCost += ((numberOfLines - 1) * planType.getAdditionalLineRate());
-			System.out.print(planType.getBasicMonthlyRate()+" + ( "+(numberOfLines-1)+" * "+planType.getAdditionalLineRate()+" )");
+			System.out.print(planType.getBasicMonthlyRate()+PREROUNDBRACKET+(numberOfLines-1)+" * "+planType.getAdditionalLineRate()+POSTROUNDBRACKET);
 		} else if (numberOfLines >= 4) {
 			lineCost += (((numberOfLines - 3) * planType.getFamilyDistcount())+planType.getAdditionalLineRate()*2);
-			System.out.print(planType.getBasicMonthlyRate()+" + ( "+2+" * "+planType.getAdditionalLineRate()+" ) + "+
-			" ( "+(numberOfLines-3)+" * "+planType.getFamilyDistcount()+" )");
+			System.out.print(planType.getBasicMonthlyRate()+PREROUNDBRACKET+2+" * "+planType.getAdditionalLineRate()+POSTROUNDBRACKET+
+					PREROUNDBRACKET+(numberOfLines-3)+" * "+planType.getFamilyDistcount()+POSTROUNDBRACKET);
 		} else if(numberOfLines == 1) {
 			System.out.print(planType.getBasicMonthlyRate());
 		}
@@ -33,7 +35,7 @@ public class TotalRate {
 		
 		if (minutesUsed > includedMinutes) {
 			usedCost = (minutesUsed - includedMinutes) * ratePerExcessMinute;
-			System.out.print(" + ( "+(minutesUsed - includedMinutes)+" * "+ratePerExcessMinute+" ) ");
+			System.out.print(PREROUNDBRACKET+(minutesUsed - includedMinutes)+" * "+ratePerExcessMinute+POSTROUNDBRACKET);
 		} else {
 			usedCost = 0;
 		}
