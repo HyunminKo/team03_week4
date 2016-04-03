@@ -16,10 +16,10 @@ public class App {
     		System.out.println("User의 요금제(Gold 또는 Silver)를 입력하세요.");
     		user.setPlanTypeName(scan.next());
 
-    		if(user.getPlanTypeName().equals("Gold") || user.getPlanTypeName().equals("gold")) {
+    		if("Gold".equals(user.getPlanTypeName()) || "gold".equals(user.getPlanTypeName())) {
     			planType = new Gold();
     			go = false;
-    		} else if(user.getPlanTypeName().equals("Silver") || user.getPlanTypeName().equals("silver")){
+    		} else if("Silver".equals(user.getPlanTypeName()) || "silver".equals(user.getPlanTypeName())){
     			planType = new Silver();
     			go = false;
     		}else{
