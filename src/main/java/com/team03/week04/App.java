@@ -4,7 +4,7 @@ import java.util.Scanner;
 import java.util.logging.Logger;
 
 public class App {
-    public static Logger LOG = Logger.getLogger("InfoLogging");
+    public static final Logger LOG = Logger.getLogger("InfoLogging");
 	private static final String PRINTERRORMESSAGE = "잘못된 입력값입니다.";
 	private App(){
 	}
