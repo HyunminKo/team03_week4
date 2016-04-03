@@ -48,6 +48,5 @@ TotalRate.java : 사용자 객체와 요금제 객체를 이용해 실제 청구
 ###5-3. insert the used minutes
 
 ##6. Result
-
-	![Result1](./img/result1.png)
-	![Result2](./img/result2.png)
+![Result1](./img/result1.png)
+![Result2](./img/result2.png)
