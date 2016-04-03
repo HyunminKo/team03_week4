@@ -1,11 +1,16 @@
 package com.team03.week04;
+
+import java.util.logging.Logger;
+
 public class TotalRate {
+	private static final Logger LOG_TotalRate = Logger.getLogger("InfoLogging");
 	private static final String PREROUNDBRACKET = " + ( ";
 	private static final String POSTROUNDBRACKET = " )";
 	private double totalCost = 0;
 	private double lineCost = 0;
 	private double usedCost = 0;
-	String resultofLines="",resultofUsed="";
+	String resultofLines="";
+	String resultofUsed="";
 	// 기본요금+회선에 대한 추가요금(요금제에 따라서 기본요금과 추가되는 요금이 다르다)
 	public double calNumberOfLine(User user, PlanType planType) {
 
@@ -46,7 +51,7 @@ public class TotalRate {
 	public double calTotalRate(User user, PlanType planType) {
 		totalCost = calNumberOfLine(user, planType) + calMinuteUsed(user, planType);
 		totalCost = Double.parseDouble(String.format("%.2f", totalCost));
-	     App.LOG.info(resultofLines+resultofUsed+totalCost+"$");
+		LOG_TotalRate.info(resultofLines+resultofUsed+totalCost+"$");
 		return totalCost;
 	}
 
