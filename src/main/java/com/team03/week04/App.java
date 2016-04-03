@@ -18,7 +18,7 @@ public class App {
     	
     	
     	while(go) {
-    		LOGGER.info("User의 요금제를 입력하세요.");
+    		LOGGER.info("User의 요금제(Gold/Silver)를 입력하세요.");
     		user.setPlanTypeName(scan.next());
 
     		if("Gold".equals(user.getPlanTypeName()) || "gold".equals(user.getPlanTypeName())) {
