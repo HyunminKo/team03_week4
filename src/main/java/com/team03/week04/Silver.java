@@ -1,11 +1,11 @@
 package com.team03.week04;
 
 public class Silver extends PlanType{
-	final double silverBasicMonthlyRate = 29.95;
-	final double silverAdditionalLineRate = 21.50;
-	final double silverFamilyDistcount = 5.0;
-	final int silverIncludeMinutes = 500;
-	final double silverRatePerExcessMinute = 0.54;
+	static final double silverBasicMonthlyRate = 29.95;
+	static final double silverAdditionalLineRate = 21.50;
+	static final double silverFamilyDistcount = 5.0;
+	static final int silverIncludeMinutes = 500;
+	static final double silverRatePerExcessMinute = 0.54;
 	
 	public Silver(){
 		this.setBasicMonthlyRate(silverBasicMonthlyRate);
