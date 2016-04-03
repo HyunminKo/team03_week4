@@ -5,12 +5,12 @@
     
 #jenkins - 프로젝트 설정
 ##Build
-	###Root POM : pom.xml
-	###Goals and options : package
+	Root POM : pom.xml
+	Goals and options : package
 ##Post Steps
-	###Invoke Standalone SonarQube Analysis
-		####JDK : 1.8+
-		####Analysis properties : sonar.projectKey=Team03_week4
+	Invoke Standalone SonarQube Analysis
+		JDK : 1.8+
+		Analysis properties : sonar.projectKey=Team03_week4
 			  	      sonar.projectName=Team03_week4
 				      sonar.projectVersion=0.0.1
 				      sonar.sources=src
