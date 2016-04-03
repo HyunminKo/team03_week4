@@ -3,7 +3,7 @@ package com.team03.week04;
 import java.util.logging.Logger;
 
 public class TotalRate {
-	private static final Logger LOG_TotalRate = Logger.getLogger("InfoLogging");
+	private static final Logger LOG_TOTALRATE = Logger.getLogger("InfoLogging");
 	private static final String PREROUNDBRACKET = " + ( ";
 	private static final String POSTROUNDBRACKET = " )";
 	private double totalCost = 0;
@@ -51,7 +51,7 @@ public class TotalRate {
 	public double calTotalRate(User user, PlanType planType) {
 		totalCost = calNumberOfLine(user, planType) + calMinuteUsed(user, planType);
 		totalCost = Double.parseDouble(String.format("%.2f", totalCost));
-		LOG_TotalRate.info(resultofLines+resultofUsed+totalCost+"$");
+		LOG_TOTALRATE.info(resultofLines+resultofUsed+totalCost+"$");
 		return totalCost;
 	}
 
