@@ -3,11 +3,9 @@ package com.team03.week04;
 import java.util.Scanner;
 
 public class App {
+	private static final String PRINTERRORMESSAGE = "잘못된 입력값입니다.";
 	private App(){
 	}
-	
-	private static final String PRINTERRORMESSAGE = "잘못된 입력값입니다.";
-	
     public static void main( String[] args ) {
     	Scanner scan = new Scanner(System.in);
     	User user = new User();
