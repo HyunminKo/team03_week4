@@ -5,6 +5,9 @@ import java.util.Scanner;
 public class App {
 	private App(){
 	}
+	
+	private static final String printedErrorMessage = "잘못된 입력값입니다.";
+	
     public static void main( String[] args ) {
     	Scanner scan = new Scanner(System.in);
     	User user = new User();
@@ -25,7 +28,7 @@ public class App {
     			planType = new Silver();
     			go = false;
     		}else{
-    			System.out.println("잘못된 입력값입니다.");
+    			System.out.println(printedErrorMessage);
     		}
     		
     	}
@@ -35,7 +38,7 @@ public class App {
 	    	System.out.println("User의 회선 수를 입력하세요. ");
 	    	user.setNumberOfLines(scan.nextInt());
 	    	if(user.getNumberOfLines()<=0)
-	    		System.out.println("잘못된 입력값입니다.");
+	    		System.out.println(printedErrorMessage);
 	    	else
 	    		go = false;
     	}
@@ -45,7 +48,7 @@ public class App {
 	    	System.out.println("User의 사용시간을 입력하세요. ");
 	    	user.setMinutesUsed(scan.nextInt());
 	    	if(user.getMinutesUsed()<=0)
-	    		System.out.println("잘못된 입력값입니다.");
+	    		System.out.println(printedErrorMessage);
 	    	else
 	    		go = false;
     	}
