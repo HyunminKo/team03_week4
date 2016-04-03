@@ -1,7 +1,7 @@
 package com.team03.week04;
 
 public class TotalRate {
-	private double totalRate = 0;
+	private double totalCost = 0;
 	private double lineCost = 0;
 	private double usedCost = 0;
 
@@ -42,12 +42,12 @@ public class TotalRate {
 	}
 
 	public double calTotalRate(User user, PlanType planType) {
-		totalRate = calNumberOfLine(user, planType) + calMinuteUsed(user, planType);
-		System.out.printf(" = %.2f",totalRate);
-		return totalRate;
+		totalCost = calNumberOfLine(user, planType) + calMinuteUsed(user, planType);
+		System.out.printf(" = %.2f",totalCost);
+		return totalCost;
 	}
 
 	public double getTotalRate() {
-		return this.totalRate;
+		return this.totalCost;
 	}
 }
