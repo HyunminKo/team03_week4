@@ -5,14 +5,14 @@ import java.util.Scanner;
 public class App {
 	private App(){
 	}
-	private static final String printedErrorMessage = "잘못된 입력값입니다.";
-	
     public static void main( String[] args ) {
     	Scanner scan = new Scanner(System.in);
     	User user = new User();
     	PlanType planType = null;
     	TotalRate totalRate = new TotalRate();
     	boolean go = true;
+    	
+    	
     	
     	while(go) {
     		System.out.println("User의 요금제(Gold 또는 Silver)를 입력하세요.");
@@ -25,7 +25,7 @@ public class App {
     			planType = new Silver();
     			go = false;
     		}else{
-    			System.out.println(printedErrorMessage);
+    			System.out.println("잘못된 입력값입니다.");
     		}
     		
     	}
@@ -35,7 +35,7 @@ public class App {
 	    	System.out.println("User의 회선 수를 입력하세요. ");
 	    	user.setNumberOfLines(scan.nextInt());
 	    	if(user.getNumberOfLines()<=0)
-	    		System.out.println(printedErrorMessage);
+	    		System.out.println("잘못된 입력값입니다.");
 	    	else
 	    		go = false;
     	}
@@ -45,7 +45,7 @@ public class App {
 	    	System.out.println("User의 사용시간을 입력하세요. ");
 	    	user.setMinutesUsed(scan.nextInt());
 	    	if(user.getMinutesUsed()<=0)
-	    		System.out.println(printedErrorMessage);
+	    		System.out.println("잘못된 입력값입니다.");
 	    	else
 	    		go = false;
     	}
