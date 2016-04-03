@@ -37,8 +37,7 @@ public class App {
 	    	user.setNumberOfLines(scan.nextInt());
 	    	if(user.getNumberOfLines()<=0){
 	    		System.out.println(PRINTERRORMESSAGE);
-	    	}
-	    	else{
+	    	}else{
 	    		go = false;
 	    	}
     	}
@@ -49,8 +48,7 @@ public class App {
 	    	user.setMinutesUsed(scan.nextInt());
 	    	if(user.getMinutesUsed()<=0){
 	    		System.out.println(PRINTERRORMESSAGE);
-	    	}
-	    	else{
+	    	}else{
 	    		go = false;
 	    	}
     	}
