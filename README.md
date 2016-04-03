@@ -44,7 +44,7 @@
 ####5-1. insert your plan type.
 		(ex. Gold, gold, Silver, silver)
 ####5-2. insert your number of lines.
-		
+		(ex. 1+)
 ####5-3. insert the used minutes
 
 ####6. Result
