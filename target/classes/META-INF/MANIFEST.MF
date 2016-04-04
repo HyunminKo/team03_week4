@@ -1,5 +1,33 @@
 Manifest-Version: 1.0
 Built-By: 19
+Class-Path: lib/jacoco-maven-plugin-0.7.6.201602180812.jar lib/maven-p
+ lugin-api-2.2.1.jar lib/maven-project-2.2.1.jar lib/maven-settings-2.
+ 2.1.jar lib/maven-profile-2.2.1.jar lib/maven-model-2.2.1.jar lib/mav
+ en-artifact-manager-2.2.1.jar lib/maven-repository-metadata-2.2.1.jar
+  lib/wagon-provider-api-1.0-beta-6.jar lib/backport-util-concurrent-3
+ .1.jar lib/maven-plugin-registry-2.2.1.jar lib/plexus-interpolation-1
+ .11.jar lib/maven-artifact-2.2.1.jar lib/plexus-container-default-1.0
+ -alpha-9-stable-1.jar lib/classworlds-1.1-alpha-2.jar lib/plexus-util
+ s-1.5.6.jar lib/file-management-1.2.1.jar lib/maven-shared-io-1.1.jar
+  lib/maven-reporting-api-2.2.1.jar lib/doxia-sink-api-1.1.jar lib/dox
+ ia-logging-api-1.1.jar lib/maven-reporting-impl-2.1.jar lib/doxia-cor
+ e-1.1.2.jar lib/xercesImpl-2.8.1.jar lib/commons-lang-2.4.jar lib/com
+ mons-httpclient-3.1.jar lib/commons-codec-1.2.jar lib/doxia-site-rend
+ erer-1.1.2.jar lib/doxia-decoration-model-1.1.2.jar lib/doxia-module-
+ xhtml-1.1.2.jar lib/doxia-module-fml-1.1.2.jar lib/plexus-i18n-1.0-be
+ ta-7.jar lib/plexus-velocity-1.1.7.jar lib/velocity-1.5.jar lib/commo
+ ns-collections-3.2.jar lib/commons-validator-1.2.0.jar lib/commons-be
+ anutils-1.7.0.jar lib/commons-digester-1.6.jar lib/commons-logging-1.
+ 0.4.jar lib/oro-2.0.8.jar lib/xml-apis-1.0.b2.jar lib/org.jacoco.core
+ -0.7.6.201602180812.jar lib/asm-debug-all-5.0.4.jar lib/org.jacoco.re
+ port-0.7.6.201602180812.jar lib/org.jacoco.agent-0.7.6.201602180812-r
+ untime.jar lib/maven-surefire-plugin-2.16.jar lib/maven-surefire-comm
+ on-2.16.jar lib/surefire-booter-2.16.jar lib/maven-plugin-descriptor-
+ 2.0.9.jar lib/maven-core-2.0.9.jar lib/maven-plugin-parameter-documen
+ ter-2.0.9.jar lib/maven-error-diagnostics-2.0.9.jar lib/maven-monitor
+ -2.0.9.jar lib/commons-lang3-3.1.jar lib/surefire-api-2.16.jar lib/ma
+ ven-toolchain-2.0.9.jar lib/maven-plugin-annotations-3.2.jar
 Build-Jdk: 1.8.0_73
 Created-By: Maven Integration for Eclipse
+Main-Class: com.team03.week04.App
 
