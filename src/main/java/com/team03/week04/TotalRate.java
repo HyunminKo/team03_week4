@@ -40,6 +40,7 @@ public class TotalRate {
 		if (minutesUsed > includedMinutes) {
 			usedCost = (minutesUsed - includedMinutes) * ratePerExcessMinute;
 			resultofUsed+=(PREROUNDBRACKET+(minutesUsed - includedMinutes)+" * "+ratePerExcessMinute+POSTROUNDBRACKET+" = ");
+
 		} else {
 			resultofUsed+=" = ";
 			usedCost = 0;

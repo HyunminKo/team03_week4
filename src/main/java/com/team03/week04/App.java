@@ -4,20 +4,21 @@ import java.util.Scanner;
 import java.util.logging.Logger;
 
 public class App {
+
     private static final Logger LOGGER = Logger.getLogger("InfoLogging");
 	private static final String PRINTERRORMESSAGE = "잘못된 입력값입니다.";
 	private App(){
 	}
     public static void main( String[] args ) {
+    	
     	Scanner scan = new Scanner(System.in);
     	User user = new User();
     	PlanType planType = null;
     	TotalRate totalRate = new TotalRate();
     	boolean go = true;
     	
-    	
-    	
     	while(go) {
+
     		LOGGER.info("User의 요금제(Gold/Silver)를 입력하세요.");
     		user.setPlanTypeName(scan.next());
 
@@ -28,6 +29,7 @@ public class App {
     			planType = new Silver();
     			go = false;
     		}else{
+
     			LOGGER.info(PRINTERRORMESSAGE);
     		}
     		
@@ -35,6 +37,7 @@ public class App {
     	
     	go = true;
     	while(go){
+
     		LOGGER.info("User의 회선 수를 입력하세요.");
 	    	user.setNumberOfLines(scan.nextInt());
 	    	if(user.getNumberOfLines()<=0){
@@ -46,6 +49,7 @@ public class App {
     	
     	go = true;
     	while(go){
+
     		LOGGER.info("User의 사용시간을 입력하세요.");
 	    	user.setMinutesUsed(scan.nextInt());
 	    	if(user.getMinutesUsed()<=0){
@@ -55,6 +59,7 @@ public class App {
 	    	}
     	}
     	
+
 
     	LOGGER.info("User의 요금제 : " + user.getPlanTypeName());
 
